@@ -3,9 +3,8 @@ namespace cualquirCosa.Resultados.ResultadoUsuario;
 public class ResultadoUsuario : ResultadoBase
 {
     
-        public string NombreUsuario { get; set; } 
-        
-        public string Rol { get; set; }
+        public List<ResultadoUsuariosItem> listaUsuarios { get; set; } = new List<ResultadoUsuariosItem>();
 
 
 }
+

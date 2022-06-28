@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TLkDoXHIDE2MiTIh6geOsz7mE0vPhiUHxry2Q6st6D8VlCw5jQ2zcLgIUf2wFkgvcNzONHR3i6hF5/KSSrTYQA==",
+  "dgSpecHash": "OEnYuJTgajbiNbc4CGmnC/qYiwcHFPpT7A+z52Zisr7XbIDci8k4x0JOsmUWTPq+Nsh7nor3sZr6rmBvYSUFTw==",
   "success": true,
-  "projectFilePath": "E:\\Facu\\Practica\\cualquirCosa\\cualquirCosa.csproj",
+  "projectFilePath": "E:\\Facu\\Practica\\PracticaApi\\cualquirCosa\\cualquirCosa.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.6\\microsoft.entityframeworkcore.6.0.6.nupkg.sha512",

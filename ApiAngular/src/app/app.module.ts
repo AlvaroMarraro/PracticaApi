@@ -13,6 +13,7 @@ import { UsuarioProvider } from 'src/Providers/UsuarioProvider';
 import { PersonaProvider } from 'src/Providers/PersonaProvider';
 import { EditarPersonaComponent } from './editar-persona/editar-persona.component';
 import { CrearPersonaComponent } from './crear-persona/crear-persona.component';
+import { DeporteProvider } from 'src/Providers/DeporteProvider';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { CrearPersonaComponent } from './crear-persona/crear-persona.component';
     HttpClientModule
    
   ],
-  providers: [UsuarioProvider, PersonaProvider],
+  providers: [UsuarioProvider, PersonaProvider, DeporteProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

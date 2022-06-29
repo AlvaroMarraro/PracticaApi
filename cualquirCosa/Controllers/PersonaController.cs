@@ -20,6 +20,50 @@ public class PersonaController : ControllerBase
     {
         _context = context;
     }
+    [HttpGet]
+    [Route("api/listaSexo")]
+    public async Task<ActionResult<List<ResultadoSexo>>> GetListaSexos()
+    {
+        var resultado = new ResultadoSexo();
+        try
+        {
+
+            var sexo = await _context.Sexos.ToListAsync();             
+            if (sexo != null)
+            {
+                foreach (var sex in sexo)
+                {
+                    var varResAux = new ResultadoSexoItem
+                    {
+                        
+                        Nombre = sex.Nombre
+                        
+                    };
+                    resultado.listaSexos.Add(varResAux);
+
+                }
+
+
+                resultado.StatusCode = 200;
+                return Ok(resultado);
+            }
+            else
+            {
+                resultado.SetError("No se puede acceder a la lista");
+                resultado.StatusCode = 500;
+                return Ok(resultado);
+            }
+
+
+        }
+        catch (Exception ex)
+        {
+            resultado.StatusCode = 400;
+            resultado.SetError(ex.Message);
+            return BadRequest(resultado);
+        }
+
+    }
 
     [HttpPut]
     [Route("api/persona/UpdatePersona")]

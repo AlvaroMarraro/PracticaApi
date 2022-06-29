@@ -12,12 +12,17 @@ export class CrearPersonaComponent implements OnInit {
 
   persona = {} as Persona;
 
-  listaSexos:any[] = ["Masculino", "Femenino", "Otro"];
+  //listaSexos = ["Masculino", "Femenino", "Otro"];
     
-
-  constructor(private router:Router, private personaApi:PersonaProvider) { }
+    listaSexos: any = [];
+  constructor(private router:Router, private personaApi:PersonaProvider)
+   {
+      
+   }
 
   ngOnInit(): void {
+    //this.listaSexos;
+    this.ObtenerListaSexos();
   }
 
   async CrearPersona()
@@ -33,6 +38,20 @@ export class CrearPersonaComponent implements OnInit {
         
       }
 
+    });
+  }
+
+  async ObtenerListaSexos()
+  {
+    this.personaApi.ObtenerListaSexos().subscribe((data)=>{
+      if(data.ok)
+      {
+        this.listaSexos = data.listaSexos;
+      }
+      else
+      {
+        data.error;
+      }
     });
   }
 

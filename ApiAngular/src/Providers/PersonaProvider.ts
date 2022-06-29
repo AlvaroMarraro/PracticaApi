@@ -41,18 +41,25 @@ export class PersonaProvider{
 
     CrearPersonas(persona: Persona):Observable<any>
     {
-        /* const comando = {
+         const comando = {
             "nombre": persona.nombre,
             "apellido": persona.apellido,
             "dni": persona.dni,
             "sexo": persona.sexo,
             "calle": persona.calle,
             "numbre": persona.numero
-        } */
+        } 
         const url = this.apiUrlBase + 'api/crearPersona';
         const headers = {'content-type': 'application/json'};
-        const body = JSON.stringify(persona);
-        return this.http.post(url,body,{'headers':headers})
+        const body = JSON.stringify(comando);
+        return this.http.post(url,body,{'headers':headers});
+    }
+
+    ObtenerListaSexos():Observable<any>
+    {
+        const url = this.apiUrlBase + 'api/listaSexo';
+        const headers = {'content-type': 'application/json'};
+        return this.http.get(url,{'headers':headers});
     }
 
 

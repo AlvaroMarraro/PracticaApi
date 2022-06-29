@@ -48,4 +48,9 @@ export class ListaPersonasComponent implements OnInit {
     this.router.navigateByUrl("crearPersona");
   }
 
+  BorrarPersona()
+  {
+    
+  }
+
 }

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router'
+import {DeporteProvider} from '../../Providers/DeporteProvider'
+
+
 @Component({
   selector: 'app-deportes',
   templateUrl: './deportes.component.html',
@@ -9,19 +12,27 @@ export class DeportesComponent implements OnInit {
 
   listaDeportes:any = [];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private deporteApi:DeporteProvider) { }
 
   ngOnInit(): void {
-    //this.ObtenerDeportes();
+    this.ObtenerDeportes();
   }
 
   async ObtenerDeportes()
   {
-   /*  this.deporteApi.GetDeporte().subscribe((data) => {
-    
-        this.listaDeportes = data;
+     this.deporteApi.ObtenerDeportes().subscribe((data)=>{
+      if(data.ok)
+      {
+        this.listaDeportes = data.listaDeportes;
+      }
+      else
+      {
+        data.error;
+      }
 
-    }); */
+     });
+
+    
   }
 
 }

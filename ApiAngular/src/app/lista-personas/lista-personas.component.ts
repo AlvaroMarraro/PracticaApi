@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router'
+import {Router} from '@angular/router';
 import { Persona } from '../Interfaces/Persona';
 import {PersonaProvider} from '../../Providers/PersonaProvider'
 
@@ -21,12 +21,15 @@ export class ListaPersonasComponent implements OnInit {
     this.CargarLista();
   }
 
-  EditarPersona(id:string)
+  async EditarPersona(id:string)
   {
+    this.personaApi.ObtenerPersonaId(id).subscribe((data)=>{
+      this.router.navigateByUrl('/editar/' + id)
 
+    });
   }
 
-  CargarLista()
+  async CargarLista()
   {
     this.personaApi.ObtenerPersonas().subscribe((data)=>{
       if(data.ok){
@@ -38,6 +41,11 @@ export class ListaPersonasComponent implements OnInit {
       }
 
     });
+  }
+
+  CrearPersona()
+  {
+    this.router.navigateByUrl("crearPersona");
   }
 
 }

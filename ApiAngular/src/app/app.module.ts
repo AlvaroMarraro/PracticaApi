@@ -11,6 +11,8 @@ import { ListaPersonasComponent } from './lista-personas/lista-personas.componen
 import { DeportesComponent } from './deportes/deportes.component';
 import { UsuarioProvider } from 'src/Providers/UsuarioProvider';
 import { PersonaProvider } from 'src/Providers/PersonaProvider';
+import { EditarPersonaComponent } from './editar-persona/editar-persona.component';
+import { CrearPersonaComponent } from './crear-persona/crear-persona.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { PersonaProvider } from 'src/Providers/PersonaProvider';
     LogInComponent,
     RegistrarUsuarioComponent,
     ListaPersonasComponent,
-    DeportesComponent
+    DeportesComponent,
+    EditarPersonaComponent,
+    CrearPersonaComponent
   ],
   imports: [
     BrowserModule,

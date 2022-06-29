@@ -17,14 +17,14 @@ export class RegistrarUsuarioComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  Registrar()
+  async Registrar()
   {
     this.usuarioApi.createUsuario(this.usuario.nombreUsu, this.usuario.password).subscribe((data)=>
     {
       if(data.ok)
       {
         alert("Usuario Creado Correctamente");
-        this.router.navigateByUrl('login');
+        this.router.navigateByUrl('/login');
         
       }
       else
@@ -33,7 +33,11 @@ export class RegistrarUsuarioComponent implements OnInit {
       }
     
     });
-    
+
+  }
+  Atras()
+  {
+    this.router.navigateByUrl("/login")
   }
 
 }

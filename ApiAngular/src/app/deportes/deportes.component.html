@@ -1,1 +1,15 @@
-<p>deportes works!</p>
+<div class="container-fluid bg-secondary py-h">
+    <div class="container text-white">
+        <div class="display-5">Deportes</div>
+        <p class="lead">Lista Deportes</p>
+    </div>
+  </div>
+  <div class="container">
+      <div class="card col-md-10 ml-sm-auto col-lg-10 pt-3 px-4" *ngFor="let dep of listaDeportes" style="width: 18rem;">
+          <img src="" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title" >{{dep.nombre}}</h5>
+          </div>
+      </div> 
+  </div>
+  

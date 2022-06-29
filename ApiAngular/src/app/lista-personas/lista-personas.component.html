@@ -22,7 +22,10 @@
             <td>{{per.nombre}}</td>
             <td>{{per.apellido}}</td>
             <td>{{per.sexo}}</td>
-            <td><button type="button" class="btn btn-primary btn-sm" (click)="EditarPersona(per.id)">Editar</button></td>
+            <td>
+                <button type="button" class="btn btn-primary btn-sm" (click)="EditarPersona(per.id)">Editar</button>&nbsp;
+                <button type="button" class="btn btn-primary btn-sm" (click)="CrearPersona()">Añadir</button>
+            </td>
           </tr>
         </tbody>
       </table>

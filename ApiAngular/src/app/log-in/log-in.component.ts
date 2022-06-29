@@ -19,7 +19,7 @@ export class LogInComponent implements OnInit {
   }
 
 
-  LogIn()
+  async LogIn()
   {
     this.usuarioApi.postLogin(this.usuario.nombreUsu, this.usuario.password).subscribe((data)=>
     { 

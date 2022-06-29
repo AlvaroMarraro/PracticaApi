@@ -1,0 +1,25 @@
+<div class="container-fluid bg-secondary py-h">
+    <div class="container text-white">
+        <div class="display-3">Registrar Usuario</div>
+        <p class="lead">Por favor registrese en el sistema</p>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <form action="">
+                <div class="form-control">
+                    <label for="">Nombre Usuario</label>
+                    <input type="text" [(ngModel)]="usuario.nombreUsu" name="nombreUsu" class="form-control" id="txtNombreUsu" required="required">
+                </div>
+                <div class="form-control">
+                    <label>Password</label>
+                    <input type="password" [(ngModel)]="usuario.password"  name="password" class="form-control" id="txtPassword" required="required">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" (click)="Registrar()">Registrarse</button>&nbsp;
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

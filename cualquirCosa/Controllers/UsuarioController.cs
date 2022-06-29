@@ -73,7 +73,7 @@ public class UsuarioController : ControllerBase
             {
                 Id = Guid.NewGuid(),
                 Activo = true,
-                NombreUsuario = comando.Nombre,
+                NombreUsuario = comando.NombreUsuario,
                 Password = comando.Password,
                 FechaAlta = DateOnly.Parse("2022-06-28"),
                 IdRol = new Guid("6c31ecb6-b59c-40ea-bb20-b1b7f32ce51b"),
@@ -100,7 +100,7 @@ public class UsuarioController : ControllerBase
         var resultado = new ResultadoUsuarioBase();
         try
         {
-            var usuario = await _context.Usuarios.Where(c=>c.Activo && c.NombreUsuario.Equals(comando.Nombre) && c.Password.Equals(comando.Password)).Include(c=>c.IdRolNavigation).FirstOrDefaultAsync();
+            var usuario = await _context.Usuarios.Where(c=>c.Activo && c.NombreUsuario.Equals(comando.NombreUsuario) && c.Password.Equals(comando.Password)).Include(c=>c.IdRolNavigation).FirstOrDefaultAsync();
             if(usuario.NombreUsuario != null)
             {
                 resultado.NombreUsuario = usuario.NombreUsuario;

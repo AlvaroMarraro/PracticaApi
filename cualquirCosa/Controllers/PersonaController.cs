@@ -120,7 +120,7 @@ public class PersonaController : ControllerBase
                         Nombre = per.Nombre,
                         Apellido = per.Apellido,
                         Dni = per.Dni,
-                        IdSexo = per.IdSexoNavigation.Nombre,
+                        Sexo = per.IdSexoNavigation.Nombre,
 
                     };
                     resultado.listaPersonas.Add(varResAux);

@@ -1,0 +1,31 @@
+<div class="container-fluid bg-secondary py-h">
+    <div class="container text-white">
+        <div class="display-3">Listado</div>
+        <p class="lead">Lista Personas</p>
+    </div>
+  </div>
+  
+  <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">DNI</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let per of listaPersonas">
+            <td>{{per.dni}}</td>
+            <td>{{per.nombre}}</td>
+            <td>{{per.apellido}}</td>
+            <td>{{per.sexo}}</td>
+            <td><button type="button" class="btn btn-primary btn-sm" (click)="EditarPersona(per.id)">Editar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  

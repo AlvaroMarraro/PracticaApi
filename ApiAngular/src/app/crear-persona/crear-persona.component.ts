@@ -30,7 +30,8 @@ export class CrearPersonaComponent implements OnInit {
     this.personaApi.CrearPersonas(this.persona).subscribe((data)=>{
       if(data.ok)
       {
-        alert("Persona creada Exitosamente")
+        alert("Persona creada Exitosamente");
+        this.LimpiarCampos();
 
       }else
       {
@@ -58,6 +59,15 @@ export class CrearPersonaComponent implements OnInit {
   Volver()
   {
     this.router.navigateByUrl("/listaPersonas");
+  }
+
+  LimpiarCampos()
+  {
+    this.persona.nombre = "";
+    this.persona.apellido = "";
+    this.persona.dni = "";
+    this.persona.calle = "";
+    this.persona.numero = "";
   }
 
 }

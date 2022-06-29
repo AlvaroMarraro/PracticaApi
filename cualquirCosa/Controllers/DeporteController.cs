@@ -31,7 +31,8 @@ public class DeporteController : ControllerBase
                     var varResAux = new ResultadoDeporteItem
                     {
                         
-                        Nombre = dep.Nombre
+                        Nombre = dep.Nombre,
+                        Descripcion = dep.Descripcion
                         
                     };
                     resultado.listaDeportes.Add(varResAux);

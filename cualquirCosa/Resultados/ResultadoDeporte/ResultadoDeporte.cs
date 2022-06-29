@@ -10,4 +10,5 @@ public class ResultadoDeporte : ResultadoBase
 public class ResultadoDeporteItem
 {
     public string Nombre { get; set; }
+    public string Descripcion { get; set; }
 }

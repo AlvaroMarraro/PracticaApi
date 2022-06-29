@@ -5,11 +5,14 @@
     </div>
   </div>
   <div class="container">
-      <div class="card col-md-10 ml-sm-auto col-lg-10 pt-3 px-4" *ngFor="let dep of listaDeportes" style="width: 18rem;">
-          <img src="" class="card-img-top" alt="...">
+    <div class="class-group ">
+      <div class="card" *ngFor="let i of listaDeportes" style="align-items: center;">
+          <img [src]="i.urlImagen" alt="..." style="width: 250px;; height: 250px;; margin-top: 10px; margin-right: 10px;">
           <div class="card-body">
-            <h5 class="card-title" >{{dep.nombre}}</h5>
+            <h5 class="card-title" >{{i.nombre}}</h5>
+            <p class="card-text">{{i.descripcion}}</p>
           </div>
       </div> 
+    </div>
   </div>
   

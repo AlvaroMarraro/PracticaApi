@@ -60,4 +60,9 @@ export class EditarPersonaComponent implements OnInit {
     }
   }
 
+  Volver()
+  {
+    this.router.navigateByUrl("/listaPersonas");
+  }
+
 }
